@@ -12,7 +12,6 @@ async def delete_trading_message(update: Update, context: ContextTypes.DEFAULT_T
             )
 
 if __name__ == '__main__':
-    app = ApplicationBuilder().token("7712516662:AAECNpqvIMy1OszmAAQxrBEuHYhQc52v4kQ
-").build()  # вставь токен
+    app = ApplicationBuilder().token("7712516662:AAECNpqvIMy1OszmAAQxrBEuHYhQc52v4kQ").build()  # вставь токен
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, delete_trading_message))
     app.run_polling()
